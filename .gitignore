@@ -1,0 +1,16 @@
+build/
+_build/
+*.o
+*.so
+*.a
+*.py[cod]
+*.egg-info
+dist/
+__pycache__
+.DS_Store
+.AppleDouble/
+*.deb
+*.dsc
+*.build
+*.changes
+*.orig.*
