@@ -10,6 +10,7 @@ from RFM69.RFM69registers import *
 RFM_NODE = 1
 RFM_NETWORK = 100
 RFM_PI_INTERRUPT_PIN = 22
+RFM_PI_RESET_PIN = 18
 RFM_IS_HIGH_POWER = True #Set this to false if not using the high power version
 
 # Get the Losant and RFM configuration from environment variables
@@ -34,7 +35,8 @@ radio = RFM69(RF69_433MHZ,
                     RFM_NODE, 
                     RFM_NETWORK, 
                     RFM_IS_HIGH_POWER, 
-                    intPin=RFM_PI_INTERRUPT_PIN)
+                    intPin=RFM_PI_INTERRUPT_PIN,
+                    rstPin=RFM_PI_RESET_PIN)
 
 if RFM_IS_HIGH_POWER:
   radio.setHighPower(True)
